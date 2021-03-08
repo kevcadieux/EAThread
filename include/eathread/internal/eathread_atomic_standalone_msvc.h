@@ -21,6 +21,11 @@
 	extern "C" long           _InterlockedExchange(long volatile* Target, long Value);
 	extern "C" long           _InterlockedExchangeAdd(long volatile* Addend, long Value);
 	extern "C" int64_t        _InterlockedCompareExchange64(int64_t volatile* Dest, int64_t Exchange, int64_t Comp);
+	extern "C" int64_t 		  _InterlockedExchange64_INLINE(int64_t volatile* Target, int64_t Value);
+    extern "C" int64_t        _InterlockedExchangeAdd64_INLINE(int64_t volatile* Addend, int64_t Value);
+    extern "C" int64_t        _InterlockedAnd64_INLINE(int64_t volatile* Target, int64_t Value);
+    extern "C" int64_t        _InterlockedOr64_INLINE(int64_t volatile* Target, int64_t Value);
+    extern "C" int64_t        _InterlockedXor64_INLINE(int64_t volatile* Target, int64_t Value);
 
 	#pragma intrinsic (_InterlockedCompareExchange)
 	#define InterlockedCompareExchangeImp _InterlockedCompareExchange
